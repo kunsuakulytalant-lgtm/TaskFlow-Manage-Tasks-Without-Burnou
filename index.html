@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TaskFlow: Manage Tasks Without Burnout</title>
+<meta name="description" content="TaskFlow is a task planning app with Kanban boards and AI analytics that warn you before your week gets overloaded. Join the closed beta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav aria-label="Main">
+    <a class="brand" href="#top"><span class="logo" aria-hidden="true">T</span>TaskFlow</a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+    <label for="menu-toggle" class="burger" aria-hidden="true"><span></span></label>
+    <ul class="menu">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#tariffs">Tariffs</a></li>
+      <li><a href="#integrations">Integrations</a></li>
+      <li><a class="btn btn-dark" href="#beta">Download</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="top">
+    <div class="hero-copy">
+      <h1>Manage Tasks Without Burnout</h1>
+      <p class="lead">TaskFlow plans your week on Kanban boards and warns you when a day holds more than you can finish.</p>
+      <a class="btn btn-cta" href="#beta">Join the closed beta</a>
+      <ul class="stores">
+        <li><a class="store" href="#beta"><small>Download on the</small>App Store</a></li>
+        <li><a class="store" href="#beta"><small>Get it on</small>Google Play</a></li>
+      </ul>
+    </div>
+    <figure class="phone" role="img" aria-label="TaskFlow app showing a Kanban board and a suggestion to move two tasks to Friday">
+      <p class="phone-top">Thursday <span>9 h planned</span></p>
+      <p class="nudge"><span><b>Too much for today.</b> Move 2 tasks to Friday?</span><span class="act">Move</span></p>
+      <ul class="mini">
+        <li>To do<span>Plan sprint</span><span>Review design</span></li>
+        <li>Doing<span class="late">Ship onboarding</span><span>Write API docs</span></li>
+        <li>Done<span>Release notes</span></li>
+      </ul>
+    </figure>
+  </section>
+
+  <section id="features">
+    <h2>A plan you can actually finish</h2>
+    <p class="sub">Two tools do the heavy lifting. Four more keep the week calm.</p>
+    <div class="cards">
+      <article class="big">
+        <h3>Kanban boards</h3>
+        <p>Drag tasks from To do to Doing to Done. Every board stays in sync between your phone, tablet and the web.</p>
+      </article>
+      <article class="big">
+        <h3>AI analytics</h3>
+        <p>Weekly reports show where your hours go and flag overloaded days before they happen.</p>
+      </article>
+      <article>
+        <h3>Smart reminders</h3>
+        <p>Nudges arrive when you can act, and stay quiet during focus time.</p>
+      </article>
+      <article>
+        <h3>Team spaces</h3>
+        <p>Share a board, assign owners and comment on tasks in one place.</p>
+      </article>
+      <article id="integrations">
+        <h3>Integrations</h3>
+        <p>Connect Slack, Notion and Google Calendar in two taps.</p>
+      </article>
+      <article>
+        <h3>Offline mode</h3>
+        <p>Plan on a plane. Changes sync as soon as you reconnect.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="tariffs">
+    <h2>Tariffs</h2>
+    <p class="sub">Free during the closed beta. Paid plans start after launch.</p>
+    <div class="cards plans">
+      <article>
+        <h3>Free</h3>
+        <p class="price">$0</p>
+        <p>3 boards and weekly summaries.</p>
+      </article>
+      <article class="pro">
+        <h3>Pro</h3>
+        <p class="price">$4<small> / month</small></p>
+        <p>Unlimited boards and AI analytics.</p>
+      </article>
+      <article>
+        <h3>Team</h3>
+        <p class="price">$9<small> / user / month</small></p>
+        <p>Shared spaces, roles and API access.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="beta" class="beta">
+    <h2>Join the closed beta</h2>
+    <p class="sub">Get early access and help shape the app. We email you once, when your invite is ready.</p>
+    <form class="form" action="#" method="post">
+      <label>Your Email
+        <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+        <small class="hint">Enter a valid address, like name@example.com.</small>
+      </label>
+      <label>Phone
+        <input type="tel" name="phone" placeholder="+7 700 123 45 67" pattern="\+?[0-9 ]{7,18}" autocomplete="tel" required>
+        <small class="hint">Use digits and spaces, with an optional + at the start.</small>
+      </label>
+      <label class="check"><input type="checkbox" name="terms" required> I accept the terms and the privacy policy.</label>
+      <button class="btn btn-cta" type="submit">Request beta access</button>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <nav aria-label="Footer">
+    <ul>
+      <li><a href="#">API documentation</a></li>
+      <li><a href="https://x.com/talantkunshuak">X</a></li>
+      <li><a href="https://www.instagram.com/kunshuakulytalant">Instagram</a></li>
+      <li><a href="https://t.me">Telegram</a></li>
+    </ul>
+  </nav>
+  <p class="legal">© 2026 TaskFlow Labs. All rights reserved. TaskFlow is a demo product made for a university course. Read the <a href="#">terms of use</a> and the <a href="#">privacy policy</a>.</p>
+  <label class="switch"><input type="checkbox" id="theme-toggle"><span class="track" aria-hidden="true"></span>Dark theme</label>
+</footer>
+
+<script>document.getElementById("theme-toggle").checked = matchMedia("(prefers-color-scheme: dark)").matches;</script>
+</body>
+</html>

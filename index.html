@@ -29,6 +29,7 @@
 <main>
   <section class="hero" id="top">
     <div class="hero-copy">
+      <p class="eyebrow"><span class="dot"></span>Closed beta is open</p>
       <h1>Manage Tasks Without Burnout</h1>
       <p class="lead">TaskFlow plans your week on Kanban boards and warns you when a day holds more than you can finish.</p>
       <a class="btn btn-cta" href="#beta">Join the closed beta</a>
@@ -36,6 +37,7 @@
         <li><a class="store" href="#beta"><small>Download on the</small>App Store</a></li>
         <li><a class="store" href="#beta"><small>Get it on</small>Google Play</a></li>
       </ul>
+      <p class="note">iOS and Android. Free during the beta.</p>
     </div>
     <figure class="phone" role="img" aria-label="TaskFlow app showing a Kanban board and a suggestion to move two tasks to Friday">
       <p class="phone-top">Thursday <span>9 h planned</span></p>
@@ -45,34 +47,44 @@
         <li>Doing<span class="late">Ship onboarding</span><span>Write API docs</span></li>
         <li>Done<span>Release notes</span></li>
       </ul>
+      <p class="chip"><b>On track</b> 1 task done</p>
     </figure>
   </section>
 
   <section id="features">
+    <p class="eyebrow dark">Built for focus</p>
     <h2>A plan you can actually finish</h2>
     <p class="sub">Two tools do the heavy lifting. Four more keep the week calm.</p>
     <div class="cards">
       <article class="big">
+        <div class="mini-board" aria-hidden="true"><i></i><i></i><i></i></div>
         <h3>Kanban boards</h3>
         <p>Drag tasks from To do to Doing to Done. Every board stays in sync between your phone, tablet and the web.</p>
+        <a class="more" href="#beta" aria-label="Join the beta to try Kanban boards">&rarr;</a>
       </article>
       <article class="big">
+        <div class="chart" aria-hidden="true"><b>4.5 h</b><span style="--h:35%"></span><span style="--h:55%"></span><span style="--h:45%"></span><span class="peak" style="--h:90%"></span><span style="--h:40%"></span><span style="--h:25%"></span></div>
         <h3>AI analytics</h3>
         <p>Weekly reports show where your hours go and flag overloaded days before they happen.</p>
+        <a class="more" href="#beta" aria-label="Join the beta to try AI analytics">&rarr;</a>
       </article>
       <article>
+        <span class="ico" aria-hidden="true">&#9684;</span>
         <h3>Smart reminders</h3>
         <p>Nudges arrive when you can act, and stay quiet during focus time.</p>
       </article>
       <article>
+        <span class="ico" aria-hidden="true">&#9678;</span>
         <h3>Team spaces</h3>
         <p>Share a board, assign owners and comment on tasks in one place.</p>
       </article>
       <article id="integrations">
+        <span class="ico" aria-hidden="true">&#8644;</span>
         <h3>Integrations</h3>
         <p>Connect Slack, Notion and Google Calendar in two taps.</p>
       </article>
       <article>
+        <span class="ico" aria-hidden="true">&#9728;</span>
         <h3>Offline mode</h3>
         <p>Plan on a plane. Changes sync as soon as you reconnect.</p>
       </article>
@@ -80,30 +92,42 @@
   </section>
 
   <section id="tariffs">
-    <h2>Tariffs</h2>
+    <p class="eyebrow dark">Pricing</p>
+    <h2>Good plans. No surprises.</h2>
     <p class="sub">Free during the closed beta. Paid plans start after launch.</p>
     <div class="cards plans">
       <article>
         <h3>Free</h3>
         <p class="price">$0</p>
         <p>3 boards and weekly summaries.</p>
+        <ul class="ticks"><li>Unlimited tasks</li><li>Smart reminders</li><li>Offline mode</li></ul>
+        <a class="btn btn-line" href="#beta">Start for free</a>
       </article>
       <article class="pro">
+        <span class="badge">Popular</span>
         <h3>Pro</h3>
         <p class="price">$4<small> / month</small></p>
         <p>Unlimited boards and AI analytics.</p>
+        <ul class="ticks"><li>Everything in Free</li><li>AI weekly reports</li><li>Integrations</li></ul>
+        <a class="btn btn-line" href="#beta">Choose Pro</a>
       </article>
       <article>
         <h3>Team</h3>
         <p class="price">$9<small> / user / month</small></p>
         <p>Shared spaces, roles and API access.</p>
+        <ul class="ticks"><li>Everything in Pro</li><li>Roles and permissions</li><li>Priority support</li></ul>
+        <a class="btn btn-line" href="#beta">Bring your team</a>
       </article>
     </div>
   </section>
 
   <section id="beta" class="beta">
-    <h2>Join the closed beta</h2>
-    <p class="sub">Get early access and help shape the app. We email you once, when your invite is ready.</p>
+    <div class="beta-copy">
+      <p class="eyebrow dark">Closed beta</p>
+      <h2>Make room for a better day.</h2>
+      <p class="sub">Get early access and help shape the app. We email you once, when your invite is ready.</p>
+      <ul class="ticks"><li>Early access to every new feature</li><li>A direct line to the product team</li><li>Free for the whole beta</li></ul>
+    </div>
     <form class="form" action="#" method="post">
       <label>Your Email
         <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
@@ -114,12 +138,16 @@
         <small class="hint">Use digits and spaces, with an optional + at the start.</small>
       </label>
       <label class="check"><input type="checkbox" name="terms" required> I accept the terms and the privacy policy.</label>
-      <button class="btn btn-cta" type="submit">Request beta access</button>
+      <button class="btn btn-cta" type="submit">Request beta access &rarr;</button>
     </form>
   </section>
 </main>
 
 <footer class="site-footer">
+  <div class="foot-brand">
+    <a class="brand" href="#top"><span class="logo" aria-hidden="true">T</span>TaskFlow</a>
+    <p>Make room for what matters.</p>
+  </div>
   <nav aria-label="Footer">
     <ul>
       <li><a href="#">API documentation</a></li>
@@ -128,8 +156,8 @@
       <li><a href="https://t.me">Telegram</a></li>
     </ul>
   </nav>
-  <p class="legal">© 2026 TaskFlow Labs. All rights reserved. TaskFlow is a demo product made for a university course. Read the <a href="#">terms of use</a> and the <a href="#">privacy policy</a>.</p>
   <label class="switch"><input type="checkbox" id="theme-toggle"><span class="track" aria-hidden="true"></span>Dark theme</label>
+  <p class="legal">&copy; 2026 TaskFlow Labs. All rights reserved. TaskFlow is a demo product made for a university course. Read the <a href="#">terms of use</a> and the <a href="#">privacy policy</a>.</p>
 </footer>
 
 <script>document.getElementById("theme-toggle").checked = matchMedia("(prefers-color-scheme: dark)").matches;</script>

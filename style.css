@@ -128,7 +128,11 @@ main > section { width: min(100% - 2rem, 72rem); margin-inline: auto; padding-bl
 .cards .pro { border-color: var(--primary); box-shadow: 0 0 0 .2rem var(--primary), var(--shadow); }
 
 /* ---------- Beta form (pure CSS validation) ---------- */
-main > .beta { width: min(100% - 2rem, 40rem); }
+main > .beta {
+  display: grid; gap: 2rem; align-items: center; margin-block: 2rem; padding: clamp(1.5rem, 6vw, 4rem);
+  border-radius: 2rem; background: color-mix(in srgb, var(--primary) 9%, var(--bg));
+}
+.beta .form { margin-top: 0; }
 .form {
   display: grid; gap: 1.1rem; margin-top: 2rem; padding: clamp(1.25rem, 4vw, 2rem);
   border: .0625rem solid var(--line); border-radius: 1.5rem; background: var(--surface); box-shadow: var(--shadow);
@@ -161,6 +165,37 @@ main > .beta { width: min(100% - 2rem, 40rem); }
 .switch input:checked + .track::after { transform: translateX(1.3rem); }
 .switch input:focus-visible + .track { outline: .2rem solid var(--primary); outline-offset: .2rem; }
 
+/* ---------- Figma details ---------- */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: .5rem; margin: 0 0 1rem; padding: .3rem .8rem; border-radius: 99rem;
+  background: rgb(255 255 255 / .14); font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+}
+.eyebrow.dark { padding: 0; background: none; color: var(--primary); }
+.dot { width: .5rem; height: .5rem; border-radius: 50%; background: var(--sun); }
+.note { margin: 1rem 0 0; font-size: .85rem; color: rgb(255 255 255 / .7); }
+.phone { position: relative; }
+.phone .chip {
+  position: absolute; right: .75rem; bottom: -1rem; margin: 0; padding: .5rem .8rem; border-radius: .9rem;
+  background: #fff; color: #0e2326; font-size: .75rem; box-shadow: var(--shadow);
+}
+.cards .big { display: grid; gap: .5rem; align-content: start; }
+.mini-board { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; margin-bottom: 1rem; }
+.mini-board i { display: block; height: 4.5rem; border: .0625rem solid var(--line); border-radius: .7rem; background: color-mix(in srgb, var(--primary) 12%, var(--surface)); }
+.chart { display: flex; align-items: flex-end; gap: .4rem; height: 6rem; margin-bottom: 1rem; }
+.chart b { align-self: flex-start; margin-right: auto; font-size: 1.8rem; line-height: 1; }
+.chart span { width: 1.2rem; height: var(--h); border-radius: .3rem; background: var(--primary); }
+.chart .peak { background: var(--sun); }
+.more { justify-self: end; font-size: 1.3rem; font-weight: 800; text-decoration: none; color: var(--primary); }
+.ico { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; margin-bottom: .75rem; border-radius: .7rem; background: color-mix(in srgb, var(--primary) 14%, var(--surface)); color: var(--primary); }
+.ticks { display: grid; gap: .5rem; margin: 1rem 0 1.25rem; padding: 0; list-style: none; font-size: .95rem; color: var(--muted); }
+.ticks li::before { content: "\2713"; margin-right: .5rem; font-weight: 800; color: var(--ok); }
+.plans article { position: relative; display: flex; flex-direction: column; }
+.plans .btn { margin-top: auto; }
+.btn-line { border: .125rem solid var(--line); background: transparent; color: var(--text); }
+.pro .btn-line { border-color: var(--sun); background: var(--sun); color: #1b1500; }
+.badge { position: absolute; top: 1rem; right: 1rem; padding: .2rem .6rem; border-radius: 99rem; background: var(--sun); color: #1b1500; font-size: .7rem; font-weight: 800; }
+.foot-brand p { margin: .5rem 0 0; color: var(--muted); }
+
 /* ---------- Tablet ---------- */
 @media (min-width: 40rem) {
   .cards { grid-template-columns: repeat(2, 1fr); }
@@ -176,6 +211,8 @@ main > .beta { width: min(100% - 2rem, 40rem); }
   .cards .big { grid-column: span 6; }
   .plans article { grid-column: span 4; }
   .site-footer { grid-template-columns: 1fr 2fr auto; align-items: center; }
+  .site-footer .legal { grid-column: 1 / -1; }
+  main > .beta { grid-template-columns: 1fr 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
